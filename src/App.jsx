@@ -138,7 +138,7 @@ export default function App() {
     const userMessage = `La fecha de hoy es ${date.dayName} ${date.dayNum} de ${date.month} de ${date.year}. Genera el guion completo del análisis geopolítico de hoy siguiendo todas las instrucciones del sistema. Recuerda: entrega SOLO el texto del guion, sin ningún texto adicional, notas, etiquetas ni comentarios.`
 
     try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
+      const response = await fetch('/api/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
